@@ -98,7 +98,7 @@ class BJGK_Genesis_eNews_Extended extends WP_Widget {
 		}
 
 		// Establishes current URL for MailPoet action fields.
-		$current_url = ( is_ssl() ? 'https://' : 'http://' ) . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+		$current_url = ( is_ssl() ? 'https://' : 'http://' ) . $_SERVER['HTTP_HOST'] . esc_attr( $_SERVER['REQUEST_URI'] );
 
 		echo $before_widget . '<div class="enews">';
 
